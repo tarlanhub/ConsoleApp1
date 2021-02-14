@@ -7,7 +7,7 @@ namespace ConsoleApp1
 		static void Main(string[] args)
 		{
 			//typesafety
-			string kategorietiketi = "kategori";
+			string kategorietiketi = "kategorip";
 			int ogrencisayisi = 32000;
 			bool sistemegirisyapmismi = true;
 
