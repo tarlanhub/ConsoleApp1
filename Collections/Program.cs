@@ -23,7 +23,7 @@ namespace Collections
             //Console.WriteLine( isimler[4]);
             //Console.WriteLine(isimler[0]);
 
-
+      
             List<string> isimler2 = new List<string>() {"tarlan", "Abdullayev", "Donald", "Trump"};
             Console.WriteLine(isimler2[0]);
             Console.WriteLine(isimler2[1]);
@@ -33,7 +33,7 @@ namespace Collections
             Console.WriteLine(isimler2[4]);
             Console.WriteLine(isimler2[0]);
 
-
+           
         }
     }
 }
