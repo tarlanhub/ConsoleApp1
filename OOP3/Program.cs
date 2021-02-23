@@ -7,14 +7,20 @@ namespace OOP3
     {
         static void Main(string[] args)
         {
-            IhtiyacKrediManager ihtiyacKrediManager = new IhtiyacKrediManager();
-            TasitKrediManager tasitKrediManager = new TasitKrediManager();
-            KonutKrediManager konutKrediManager = new KonutKrediManager();
+            ICreditManager ihtiyacKrediManager = new IhtiyacKrediManager();
+            ICreditManager tasitKrediManager = new TasitKrediManager();
+            ICreditManager konutKrediManager = new KonutKrediManager();
 
+            ILoggerService databaseLoggerService = new DatabaseLoggerService();
+            ILoggerService fileLoggerService = new FileLoggerService();
+
+            
+            
+            
             BasvuruManager basvurumanager = new BasvuruManager();
-            //basvurumanager.BasvuruYap(ihtiyacKrediManager);
-            List<ICreditManager> krediler = new List<ICreditManager>() {ihtiyacKrediManager, tasitKrediManager};
-            basvurumanager.KrediOnBilgilendirmesiYap(krediler);
+            basvurumanager.BasvuruYap(ihtiyacKrediManager, databaseLoggerService);
+            List<ICreditManager> krediler = new List<ICreditManager>() {ihtiyacKrediManager, tasitKrediManager,konutKrediManager};
+            //basvurumanager.KrediOnBilgilendirmesiYap(krediler);
 
                 
         }
