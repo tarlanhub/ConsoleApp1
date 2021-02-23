@@ -15,5 +15,5 @@ namespace OOP1
         {
             Console.WriteLine(product.ProductName + "güncellendi");
         }
-     
+    }
 }
